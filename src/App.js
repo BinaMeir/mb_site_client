@@ -1,7 +1,7 @@
 import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Gallery from './Gallery';
-// import Recommendations from './Recommendations';
+import Gallery from './Gallery';
+import Recommendations from './Recommendations';
 import About from './About';
 import Contact from './Contact'
 import DesktopNavbar from './DesktopNavbar';
@@ -23,8 +23,8 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="gallery" element={<Gallery />} /> */}
-            {/* <Route path="recommendations" element={<Recommendations />} /> */}
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="recommendations" element={<Recommendations />} />
             <Route path="about"  element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="house-rennovation" element={<HouseArticle />} />

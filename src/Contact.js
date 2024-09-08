@@ -73,33 +73,33 @@ const Contact = () => {
         <p>Thanks for contacting us!</p>
       ) : (
         <>
-          <div className="name">
-            <input 
-              type="text" 
-              placeholder="Name" 
-              value={name} 
-              onChange={(e) => setName(e.target.value)} 
-            />
-            {errors.name && <p>{errors.name}</p>}
-          </div>
-          <div className="phoneNumber">
-            <input 
-              type="text" 
-              placeholder="Phone Number" 
-              value={phoneNumber} 
-              onChange={(e) => setPhoneNumber(e.target.value)} 
-            />
-            {errors.phoneNumber && <p>{errors.phoneNumber}</p>}
-          </div>
-          <div className="email">
-            <input 
-              type="text" 
-              placeholder="Email" 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
-            />
-            {errors.email && <p>{errors.email}</p>}
-          </div>
+        <div className="name">
+        <input 
+            type="text" 
+            placeholder="Name" 
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+        />
+        {errors.name && <p className="error-message">{errors.name}</p>}
+        </div>
+        <div className="phoneNumber">
+        <input 
+            type="text" 
+            placeholder="Phone Number" 
+            value={phoneNumber} 
+            onChange={(e) => setPhoneNumber(e.target.value)} 
+        />
+        {errors.phoneNumber && <p className="error-message">{errors.phoneNumber}</p>}
+        </div>
+        <div className="email">
+        <input 
+            type="text" 
+            placeholder="Email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+        />
+        {errors.email && <p className="error-message">{errors.email}</p>}
+        </div>
           <button onClick={handleSave}>Save</button>
         </>
       )}

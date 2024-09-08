@@ -1,3 +1,4 @@
+/* Existing CSS for the contact container */
 .contact-container {
   background-color: #090909;
   border-radius: 8px;
@@ -61,27 +62,36 @@
   background-color: #0056b3;
 }
 
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.85rem; /* Smaller font size */
+  margin-top: 5px;
+  margin-bottom: -10px; /* Reduce space to prevent layout shift */
+  text-align: left; /* Align to the left for better readability */
+  line-height: 1.2; /* Control the spacing between lines */
+}
+
 @media (max-width: 768px) {
   .contact-container {
-      flex-direction: column;
-      padding: 15px;
+    flex-direction: column;
+    padding: 15px;
   }
 
   .contact-container.horizontal {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .contact-container.vertical {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .contact-item {
-      width: 100%;
-      margin: 5px 0;
+    width: 100%;
+    margin: 5px 0;
   }
 
   .contact input,
   .contact button {
-      width: 100%;
+    width: 100%;
   }
 }
