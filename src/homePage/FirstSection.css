@@ -2,7 +2,7 @@
 
 .first-section {
     position: relative;
-    background: url('../public/home.jpg') no-repeat center center/cover;
+    background: url('../../public/home.jpg') no-repeat center center/cover;
     background-size: cover;  /* Ensure the background covers the entire section */
     height: 100vh;           /* Full viewport height */
     width: 100vw;            /* Full viewport width */
@@ -67,7 +67,7 @@
 
 .contact-component-container {
     position: absolute;
-    bottom: 30px; /* Adjust this value to move the contact component up or down */
+    bottom: 60px; /* Adjust this value to move the contact component up or down */
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;

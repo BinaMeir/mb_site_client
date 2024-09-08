@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import serverConfig from './serverConfig';
+import serverConfig from '../serverConfig';
 import Images from './Images';
 
 const Recommendations = () => {

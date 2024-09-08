@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import './Images.css'; // Ensure you have this file for custom CSS
+import './Images.css'; 
 
-const Images = ({ imageList }) => {
+const Images = ({ imageList = []}) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [startX, setStartX] = useState(0);
 
@@ -61,7 +61,7 @@ const Images = ({ imageList }) => {
     };
   }, [selectedImageIndex, handleNextImage, handlePrevImage]);
 
-  if (imageList == null) {
+  if (!Array.isArray(imageList) || imageList.length === 0) {
     return <div>Sorry, this gallery is empty</div>;
   }
 

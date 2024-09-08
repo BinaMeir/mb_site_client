@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import serverConfig from './serverConfig';
+import serverConfig from '../serverConfig';
 import Images from './Images';
 import './Gallery.css'; // Ensure you have this file for custom CSS
 
@@ -13,17 +13,32 @@ const Gallery = () => {
   const fetchImages = useCallback(async () => {
     try {
       setLoading(true);
-      const [kitchenResponse, bathroomResponse, livingRoomResponse] = await Promise.all([
+      const [kitchenResponse, bathroomResponse, livingRoomResponse,
+        flooringResponse, constructionResponse, plasterResponse, plumbingResponse, electricityResponse
+      ] = await Promise.all([
         axios.get(`${serverConfig.SERVER_URL}/images/kitchen`),
         axios.get(`${serverConfig.SERVER_URL}/images/bathroom`),
-        axios.get(`${serverConfig.SERVER_URL}/images/living-room`)
+        axios.get(`${serverConfig.SERVER_URL}/images/living-room`),
+        axios.get(`${serverConfig.SERVER_URL}/images/flooring`),
+        axios.get(`${serverConfig.SERVER_URL}/images/construction`),
+        axios.get(`${serverConfig.SERVER_URL}/images/plaster`),
+        axios.get(`${serverConfig.SERVER_URL}/images/plumbing`),
+        axios.get(`${serverConfig.SERVER_URL}/images/electricity`)
       ]);
 
       const fetchedImages = {
         kitchen: kitchenResponse.data,
         bathroom: bathroomResponse.data,
-        livingRoom: livingRoomResponse.data
+        livingRoom: livingRoomResponse.data,
+        flooring: flooringResponse.data,
+        construction: constructionResponse.data,
+        plaster: plasterResponse.data,
+        plumbing: plumbingResponse.data,
+        electricity: electricityResponse.data
       };
+      console.log("Kitchen images response:", kitchenResponse.data);
+      console.log("Bathroom images response:", bathroomResponse.data);
+      console.log("Living Room images response:", livingRoomResponse.data);
 
       setImages(fetchedImages);
     } catch (error) {
@@ -52,14 +67,18 @@ const Gallery = () => {
   };
 
   const categories = [
-    { name: 'kitchen', displayName: 'Kitchen' },
-    { name: 'bathroom', displayName: 'Bathroom' },
-    { name: 'livingRoom', displayName: 'Living Room' }
+    { name: 'kitchen', displayName: 'מטבח' },
+    { name: 'bathroom', displayName: 'אמבטיה' },
+    { name: 'livingRoom', displayName: 'סלון' },
+    { name: 'flooring', displayName: 'ריצוף' },
+    { name: 'construction', displayName: 'בנייה' },
+    { name: 'plaster', displayName: 'גבס' },
+    { name: 'plumbing', displayName: 'אינסטלציה' },
+    { name: 'electricity', displayName: 'חשמל' }
   ];
 
   return (
     <div className="gallery">
-      <h2>Welcome to the Gallery!</h2>
       {!selectedCategory ? (
         <div className="category-selection">
           {categories.map((category) => (
@@ -76,7 +95,6 @@ const Gallery = () => {
       ) : (
         <div className="image-display">
           <Images imageList={images[selectedCategory]} />
-          <button className="back-button" onClick={() => setSelectedCategory(null)}>Go Back</button>
         </div>
       )}
     </div>

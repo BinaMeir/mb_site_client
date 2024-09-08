@@ -1,14 +1,14 @@
-import Home from './Home';
+import Home from './homePage/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Gallery from './Gallery';
-import Recommendations from './Recommendations';
-import About from './About';
-import Contact from './Contact'
-import DesktopNavbar from './DesktopNavbar';
-import MobileNavbar from './MobileNavbar';
+import Gallery from './pages/Gallery';
+import Recommendations from './pages/Recommendations';
+import About from './pages/About';
+import Contact from './pages/Contact'
+import DesktopNavbar from './pageComponents/DesktopNavbar';
+import MobileNavbar from './pageComponents/MobileNavbar';
 import IsMobile from './IsMobile';
-import HouseArticle from './HouseArticle';
-import Footer from './Footer';
+import HouseArticle from './pages/HouseArticle';
+import Footer from './pageComponents/Footer';
 import './App.css';
 
 function App() {

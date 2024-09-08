@@ -1,0 +1,87 @@
+/* RenovationSteps.css */
+.renovation-steps-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #e8f0ff, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+    direction: rtl; /* Ensures right-to-left layout */
+    text-align: right; /* Aligns text to the right */
+    max-width: 800px;
+}
+
+.renovation-steps-container:hover {
+    transform: scale(1.02);
+}
+
+.renovation-steps-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.step {
+    display: flex;
+    align-items: start;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.step:hover {
+    background-color: #f1f8ff;
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    flex-shrink: 0;
+    margin-left: 20px; /* Adjust margin for RTL layout */
+    margin-right: 0;
+    font-size: 40px;
+    color: #34dbb1;
+    background-color: #eaf6ff;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-content {
+    max-width: 650px;
+}
+
+.step-content h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.step-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-icon {
+        margin: 0 0 15px 0;
+    }
+}

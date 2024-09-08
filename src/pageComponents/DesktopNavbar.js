@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './DesktopNavbar.css'; // Custom CSS for additional styling
+import './DesktopNavbar.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons'; // Import the phone icon
-import logo from './logo.jpg'; // Adjust the path to your logo image
+import { faPhone } from '@fortawesome/free-solid-svg-icons'; 
+import logo from './logo.jpg'; 
 import { Link } from 'react-router-dom';
 
 const DesktopNavbar = () => {

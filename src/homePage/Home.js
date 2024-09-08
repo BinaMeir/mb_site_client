@@ -11,8 +11,8 @@ const Home = () => {
             <FirstSection />
             <SecondSection />
             <SlideShow />
-            <RenovationSteps />
             <AboutSection />
+            <RenovationSteps />
         </div>
 
      );

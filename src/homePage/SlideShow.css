@@ -1,0 +1,14 @@
+
+.slideshow-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.slideshow-image {
+    width: 100%; /* Take full width of the container */
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 10px;
+}

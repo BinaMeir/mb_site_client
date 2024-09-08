@@ -7,8 +7,8 @@ const SlideShow = () => {
     const images = [
         'livingRoom.jpg',
         'kitchen.jpg',
-        'home.jpg',
-        // Add more images as needed
+        'livingRoom2.jpg',
+        'bathroom2.jpg'
     ];
 
     const settings = {

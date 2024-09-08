@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  text-align: right;
 }
 
 .contact-container.horizontal {
@@ -24,7 +25,7 @@
 .contact-item {
   flex: 1 1 300px;
   margin: 10px 0;
-  text-align: center;
+  text-align: right;
 }
 
 .contact label {
@@ -62,9 +63,9 @@
   background-color: #0056b3;
 }
 
-.error-message {
+.contact-container .error-message {
   color: #ff4d4d;
-  font-size: 0.85rem; /* Smaller font size */
+  font-size: 0.85rem !important; /* Smaller font size */
   margin-top: 5px;
   margin-bottom: -10px; /* Reduce space to prevent layout shift */
   text-align: left; /* Align to the left for better readability */
